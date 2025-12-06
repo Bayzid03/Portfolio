@@ -1,0 +1,212 @@
+/* ===== CUSTOM STYLES ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== NAVIGATION ===== */
+.nav-link {
+    position: relative;
+    padding-bottom: 2px;
+    font-weight: 500;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #00d9ff 0%, #0066ff 100%);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ===== BADGES ===== */
+.badge-pill {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid #64ffda;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ccd6f6;
+    background: #112240;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.badge-pill:hover {
+    border-color: #64ffda;
+    background: rgba(100, 255, 218, 0.1);
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
+    transform: scale(1.05);
+}
+
+/* ===== SKILL BADGES ===== */
+.skill-badge {
+    display: inline-block;
+    padding: 10px 14px;
+    border: 1.5px solid rgba(0, 217, 255, 0.3);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #b8c5d6;
+    background: #1e2230;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.skill-badge:hover {
+    border-color: #00d9ff;
+    color: #00d9ff;
+    background: rgba(5, 146, 228, 0.1);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(5, 146, 228, 0.3);
+}
+
+/* ===== FILTER BUTTONS ===== */
+.filter-btn {
+    padding: 10px 20px;
+    border: 2px solid rgba(0, 217, 255, 0.3);
+    border-radius: 50px;
+    background: transparent;
+    color: #b8c5d6;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    border-color: #00d9ff;
+    background: linear-gradient(135deg, #00d9ff 0%, #0066ff 100%);
+    color: #0f111a;
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.4);
+}
+
+/* ===== PROJECT CARDS ===== */
+.project-card {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.project-btn {
+    transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ===== MODALS ===== */
+.modal {
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f111a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #00d9ff 0%, #0066ff 100%);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00d9ff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .badge-pill {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    .skill-badge {
+        padding: 8px 12px;
+        font-size: 0.75rem;
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(0, 217, 255, 0.6);
+    }
+}
+
+/* Loading Animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
